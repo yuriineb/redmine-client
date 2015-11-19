@@ -1,7 +1,10 @@
-require "redmine/client/version"
+require 'redmine/client/version'
+require 'faraday'
 
 module Redmine
   module Client
-    # Your code goes here...
+    def initialize(access_key)
+      @access_key = access_key
+    end
   end
 end
