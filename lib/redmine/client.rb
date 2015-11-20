@@ -59,10 +59,10 @@ module Redmine
     crud :issues, :issue
 
     def add_member_to_project(user_id, project_id, role_ids=[3])
-      faraday.post("/projects/#{project_id}/memberships", {
+      faraday.post("/projects/#{project_id}/memberships.json", {
         "membership" => {
-          "user_id" => user_id,
-          "roles"    => Array(role_ids),
+          "user_id"  => user_id,
+          "role_ids" => Array(role_ids),
         }})
     end
   end
