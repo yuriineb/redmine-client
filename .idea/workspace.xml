@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2a7ca69f-3a13-4286-8a04-bc0941537ba2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/redmine/client.rb" afterPath="$PROJECT_DIR$/lib/redmine/client.rb" />
     </list>
     <ignored path="redmine-client.iws" />
@@ -30,8 +29,8 @@
       <file leaf-file-name="client.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/redmine/client.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77832514">
-              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.6280788">
+              <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -184,8 +183,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/redmine/client.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77832514">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.6280788">
+          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
           <folding />
         </state>
       </provider>

@@ -63,6 +63,11 @@ module Redmine
     crud :projects, :project
     crud :issues, :issue
 
+    def show_with_journal(id, full_response=false)
+      resp = faraday.get("/issues.json/#{id}?include=journals")
+      full_response ? resp : resp.body
+    end
+
     def open_issues(full_response=false)
       resp = faraday.get("/issues.json")
       full_response ? resp : resp.body
