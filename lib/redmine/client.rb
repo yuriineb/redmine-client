@@ -41,7 +41,7 @@ module Redmine
           full_response ? resp : resp.body
         end
 
-        def find_#{plural}(full_response=false)
+        def #{plural}(full_response=false)
           resp = faraday.get("/#{plural}.json")
           full_response ? resp : resp.body
         end
