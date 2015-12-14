@@ -41,7 +41,7 @@ module Redmine
           full_response ? resp : resp.body
         end
 
-        def #{plural}(full_response=false)
+        def find_#{plural}(full_response=false)
           resp = faraday.get("/#{plural}.json")
           full_response ? resp : resp.body
         end
@@ -63,9 +63,15 @@ module Redmine
     crud :projects, :project
     crud :issues, :issue
 
+    def open_issues(full_response=false)
+      resp = faraday.get("/issues.json")
+      full_response ? resp : resp.body
+    end
+
+
     def closed_issues(full_response=false)
-    resp = faraday.get("/#{plural}.json?status_id=closed")
-    full_response ? resp : resp.body
+      resp = faraday.get("/issues.json?status_id=closed")
+      full_response ? resp : resp.body
     end
 
     def add_member_to_project(user_id, project_id, role_ids=[3])
