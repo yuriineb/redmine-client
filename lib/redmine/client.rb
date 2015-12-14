@@ -63,6 +63,11 @@ module Redmine
     crud :projects, :project
     crud :issues, :issue
 
+    def closed_issues(full_response=false)
+    resp = faraday.get("/#{plural}.json?status_id=closed")
+    full_response ? resp : resp.body
+    end
+
     def add_member_to_project(user_id, project_id, role_ids=[3])
       faraday.post("/projects/#{project_id}/memberships.json", {
         "membership" => {
