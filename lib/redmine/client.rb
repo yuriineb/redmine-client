@@ -41,6 +41,11 @@ module Redmine
           full_response ? resp : resp.body
         end
 
+        def find_#{plural}(full_response=false)
+          resp = faraday.get("/#{plural}.json")
+          full_response ? resp : resp.body
+        end
+
         def update_#{singular}(id, params, full_response=false)
           resp = faraday.put("/#{plural}/\#{id}.json", {"#{singular}" => params})
           full_response ? resp : resp.body
