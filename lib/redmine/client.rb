@@ -64,7 +64,7 @@ module Redmine
     crud :issues, :issue
 
 
-    def trackers
+    def trackers(full_response=false)
       resp = faraday.get("/trackers.json")
       full_response ? resp : resp.body
     end
